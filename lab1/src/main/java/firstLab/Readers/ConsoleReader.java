@@ -37,25 +37,6 @@ public class ConsoleReader extends AbstractReader implements Reader {
         return super.getEpsilon();
     }
 
-//    @Override
-//    public double[] getB(int size) {
-//        double[] B = new double[size];
-//        System.out.println("Введите вектор B размера " + size);
-//        for (int i = 0; i < size; i++){
-//            boolean okay = false;
-//            while (!okay){
-//                try{
-//                    B[i] = scanner.nextDouble();
-//                    okay = true;
-//                }catch (InputMismatchException e){
-//                    System.err.println(Message.INCORRECT_TYPE);
-//                    scanner.next();
-//                }
-//            }
-//        }
-//        return B;
-//    }
-
     @Override
     public double[] getB(double[][] array, int size) {
         double[] B = new double[size];
@@ -86,28 +67,4 @@ public class ConsoleReader extends AbstractReader implements Reader {
 
         return array;
     }
-
-//    @Override
-//    public double[][] getMatrix(int n, double[][] array){
-//        System.out.println();
-//        System.out.println("Введите матрицу размера " + n);
-//        for (int i = 0; i < n; i++){
-//            for (int j = 0; j < n; j++){
-//                boolean okay = false;
-//                while (!okay){
-//                    try {
-//                        array[i][j] = scanner.nextDouble();
-//                        okay = true;
-//                    }catch (InputMismatchException e){
-//                        System.err.println(Message.INCORRECT_TYPE);
-//                        scanner.next();
-//                    }
-//                }
-//            }
-//        }
-//
-//        return array;
-//    }
-
-
 }

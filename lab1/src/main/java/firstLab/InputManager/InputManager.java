@@ -48,7 +48,6 @@ public class InputManager {
                     case 2 -> {
                         handleConsoleReader();
                         System.out.println();
-//                        test(n, array);
                         test(method.getMatrix().getN(), method.getMatrix().getArray());
                         System.out.println();
                         System.out.println();
@@ -58,7 +57,6 @@ public class InputManager {
                     case 3 -> {
                         handleRandom();
                         System.out.println();
-//                        test(n, array);
                         test(method.getMatrix().getN(), method.getMatrix().getArray());
                         okay = true;
                         invokeMethod();
@@ -150,8 +148,6 @@ public class InputManager {
                     method.setEpsilon(reader.getEpsilon());
                     reader = new FilesReader(file);
                     method.setN(reader.getMatrixSize());
-//                    array = reader.getMatrix(n, new double[n][n]);
-//                    B = reader.getB(n);
                     method.getMatrix().setArray(reader.getMatrix(method.getMatrix().getN(), new double[method.getMatrix().getN()][method.getMatrix().getN() + 1]));
                     method.getMatrix().setB(reader.getB(method.getMatrix().getArray(), method.getMatrix().getN()));
                     foundFile = true;
