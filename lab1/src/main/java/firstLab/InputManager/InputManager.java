@@ -36,7 +36,6 @@ public class InputManager {
                 sourceID = scanner.nextInt();
                 switch (sourceID) {
                     case 1 -> {
-                        // file reader
                         handleFilesReader();
                         System.out.println();
                         test(method.getMatrix().getN(), method.getMatrix().getArray());
@@ -119,10 +118,8 @@ public class InputManager {
         reader = new ConsoleReader(scanner);
         method.setN(reader.getMatrixSize());
         method.setEpsilon(reader.getEpsilon());
-//        array = reader.getMatrix(n, new double[n][n]);
         method.getMatrix().setArray(reader.getMatrix(method.getMatrix().getN(), new double[method.getMatrix().getN()][method.getMatrix().getN() + 1]));
         method.getMatrix().setB(reader.getB(method.getMatrix().getArray(), method.getMatrix().getN()));
-//        B = reader.getB(n);
     }
 
     private void handleFilesReader() {
