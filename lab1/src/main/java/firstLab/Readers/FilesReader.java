@@ -24,23 +24,6 @@ public class FilesReader extends AbstractReader implements Reader {
         return n;
     }
 
-//    @Override
-//    public double[][] getMatrix(int n, double[][] array) {
-//        for (int i = 0; i < n; i++) {
-//            for (int j = 0; j < n; j++) {
-//                try {
-//                    array[i][j] = scanner.nextDouble();
-//                } catch (InputMismatchException e) {
-//                    System.err.println(Message.INCORRECT_TYPE);
-//                    scanner.next();
-//                }
-//            }
-//
-//        }
-//
-//        return array;
-//    }
-
     @Override
     public double[][] getMatrix(int n, double[][] array) {
         for (int i = 0; i < n; i++) {
@@ -71,19 +54,4 @@ public class FilesReader extends AbstractReader implements Reader {
         }
         return B;
     }
-
-//    @Override
-//    public double[] getB(int size) {
-//        double[] B = new double[size];
-//        for (int i = 0; i < size; i++) {
-//            try {
-//                B[i] = scanner.nextDouble();
-//            } catch (InputMismatchException e) {
-//                System.err.println(Message.INCORRECT_TYPE);
-//                scanner.next();
-//            }
-//        }
-//        return B;
-//    }
-
 }
